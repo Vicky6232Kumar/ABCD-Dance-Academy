@@ -1,2 +1,4 @@
 node_modules/
-views/index.pug
+views/index.pug/
+key
+key.pub
