@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title ABCD Dance Academy 
+    block scripts
+    block style
+  body
+    nav#navbar 
+        ul 
+            div#logo
+              //- img(src="/static/logo.jpg", alt="NOT FOUND")
+            li #[a(href = "/") Home] 
+            li #[a(href = "/") About]
+            li #[a(href = "/") Services]
+            li #[a(href = "/") Class Info]
+            li #[a(href = "/contact") Contact Us]
+    
+    block content 
+
+    
+    footer#footsection
+        | Copyright &#169; 2020 ABCDdanceAcademy.com | All Rights Reserved
+  

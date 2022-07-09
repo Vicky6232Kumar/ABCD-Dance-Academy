@@ -1,0 +1,33 @@
+extends  base.pug
+
+block scripts 
+    script(src='/static/script.js')
+
+block style 
+    style
+      include ../static/style.css
+
+block content
+    div#container
+        section#introsection 
+          div Get Ready For Dance ....!!!
+          div Welcome To ABCD Dance Academy 
+          span What We Teach
+        section#nameunit 
+          div.item1 BHARATNATYAM
+          div HIP HOP
+          div SALSA 
+          div.item2 STREET DANCE
+        section#teachsection 
+          div.item1.box
+            img(src="/static/image/dance1.png")
+            p  Bharatanatyam is the state dance form of Tamil Nadu. Bharatanatyam contains different types of banis.
+          div.box
+            img(src="/static/image/dance2.jpg")
+            p Hip-hop is a genre of music most often characterized by a strong, rhythmic beat and a rapping vocal track. 
+          div.box
+            img(src="/static/image/dance3.jpeg")
+            p Salsa is a type of high energy traditional dance form that has its roots in the Caribbean and African lands.
+          div.item2.box
+            img(src="/static/image/dance4.png")
+            p Street dance is a type of dance genre that came to being outside the traditional dance studio.

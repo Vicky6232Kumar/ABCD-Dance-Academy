@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Gentium+Book+Plus:ital@1&family=Modak&family=Titan+One&display=swap');
+*{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+#navbar{
+    background-color: rgba(0, 0, 0, 0.584);
+    width: 100%;
+    position: fixed;
+    backdrop-filter: blur(0.3rem);
+    z-index: 50;
+}
+#navbar ul{
+    
+    display: flex;
+    height: 3.1rem;
+    justify-content: right;
+    align-items: center;
+    
+}
+#navbar li {
+    list-style: none;
+    padding: 0rem 1rem;
+}
+#navbar li :hover {
+    color: orangered;
+}
+#navbar li a{
+    color: white;
+    font-family: 'Titan One', cursive;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 0rem 1.5rem;
+    
+}
+#container::before{
+    content: " ";
+    position: absolute;
+    background: url("/static/image/section bg.jpg") no-repeat center center fixed ;
+    background-size: cover;
+    width: 100%;
+    height: 128%;
+    z-index: -1;
+}
+#introsection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 15rem;
+    color: #ffffffc9;
+    font-size: 2.5rem;
+    font-family: 'Modak', cursive;
+    padding: 6rem;
+
+}
+#introsection span{
+    margin-top: 9rem;
+    margin-bottom: -7rem;
+}
+#nameunit{
+    display: flex;
+    justify-content: center;
+
+}
+#nameunit div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Titan One', cursive;
+    color: #ffe4c4c9;
+    font-size: 1.7rem;
+    border: .2rem solid rgb(1, 1, 1);
+    padding: 0.5rem;
+    margin: 0.7rem;
+    width: 18rem;
+    height: 2rem;
+    background-color: #ffffff73;
+    backdrop-filter: blur(0.3rem);
+
+}
+#teachsection{
+    display: flex;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    color: rgb(207, 78, 78);
+    margin-top: -2rem;
+   
+}
+#teachsection div{
+    border: .2rem solid rgb(1, 1, 1);
+    width: 18rem;
+    height: 14rem;
+    padding: 0.5rem;
+    margin: 0.7rem;
+    background-color: #ffffff73;
+    backdrop-filter: blur(0.5rem);
+}
+#teachsection img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: .5rem;
+}
+.box{
+    display: flex;
+    align-items: center;
+}
+.box p{
+    color: white;
+    text-align: center;
+    font-family: 'Arima', cursive;
+
+}
+.item1{
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.item2{
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+#footsection{
+    padding-top: 0.6rem;
+    padding-bottom: 0.3rem;
+    color:white;
+    font-family: 'Titan One', cursive;
+    text-align: center;
+    background-color: black;
+    height: 1.5rem;
+}
