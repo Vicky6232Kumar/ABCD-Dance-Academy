@@ -1,20 +1,30 @@
 const express = require('express');
+const { ServerApiVersion } = require('mongodb');
+require('dotenv').config();
+const username = process.env.DB_Username;
+const apikey = process.env.DB_Password; 
+const ContactSchema = require('./model/form');
 const app = express();
 const path = require('path');
-const bodyparser = require('body-parser')
+//const bodyparser = require('body-parser')
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/dance-contact', {useNewUrlParser: true});
+
+
+//connection with mongodb cluster
+const db = `mongodb+srv://${username}:${apikey}@cluster0.spkwxtx.mongodb.net/dancecontact?retryWrites=true&w=majority`;
+mongoose.connect(db,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+    serverApi: ServerApiVersion.v1
+}).then(()=>{
+    console.log("Connection succesful")
+    
+}).catch((err)=>{
+    console.log("connection failed");
+})
 const port = 8000;
 
-//Defining mongoose schema
 
-var ContactSchema = new mongoose.Schema({
-    name: String,
-    phone: String,
-    feedback: String
-});
-
-var Contact = mongoose.model('Contact', ContactSchema);
 
 app.use('/static', express.static('static'));// for serving static files
 app.use(express.urlencoded());
@@ -34,14 +44,14 @@ app.get('/contact', (req,res) =>{
 })
 
 app.post('/contact', (req,res) =>{
-    var myData = new Contact(req.body);
+    var myData = new ContactSchema(req.body);
     myData.save().then(() => {
-        res.send("Thank you for giving your valuable time for us. Your feedback really matters.")
+        
+        res.redirect("contact");
+        
     }).catch(() =>{
         res.status(400).send("Please give right information")
     })
-
-    // res.status(200).render('contact.pug');
     
 })
 app.listen(port, () => {

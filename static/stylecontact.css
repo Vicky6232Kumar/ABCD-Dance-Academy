@@ -47,9 +47,13 @@ h1{
 .myInput:hover{
     background-color: white;
 }
+textarea{
+    resize: none;
+}
 #footsection{
     margin-top: 1.25rem;
     border-top: 0.2rem solid white;
+
 }
 textarea:hover{
     background-color: white;
